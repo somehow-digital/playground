@@ -7,8 +7,6 @@ on:
       - main
 
 jobs:
-  setup:
-    runs-on: ubuntu-latest
   lint-codebase:
     name: lint codebase
     runs-on: ubuntu-latest
