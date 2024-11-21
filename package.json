@@ -13,14 +13,20 @@
 	"scripts": {
 		"prepare": "husky",
 		"lint": "concurrently --group --prefix-colors 'auto' 'pnpm:lint:*'",
-		"lint:cspell": "cspell --no-progress --no-summary --no-must-find-files '**/*.*'"
+		"lint:prettier": "prettier --check '**/*.{js,md,json,yml,yaml}'",
+		"lint:cspell": "cspell --no-progress --no-summary --no-must-find-files '**/*.*'",
+		"fix": "concurrently --group --prefix-colors 'auto' 'pnpm:fix:*'",
+		"fix:prettier": "prettier --write '**/*.{md,json,yml,yaml}'"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^19.3.0",
 		"@somehow-digital/commitlint-config": "^1.0.0",
 		"@somehow-digital/cspell-dictionary": "^1.0.0",
+		"@somehow-digital/prettier-config": "^2.0.0",
 		"concurrently": "^9.0.0",
 		"cspell": "^8.8.4",
-		"husky": "^9.0.11"
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.10",
+		"prettier": "3.3.3"
 	}
 }
