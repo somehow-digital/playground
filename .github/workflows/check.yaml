@@ -29,5 +29,5 @@ jobs:
       - name: lint codebase
         run: pnpm lint
       - name: lint title
-        run: echo "${{ github.event.pull_request.title }}" | pnpm dlx commitlint
+        run: echo "${{ github.event.pull_request.title }}" | pnpm exec commitlint
         if: ${{ github.event_name == 'pull_request' }}
