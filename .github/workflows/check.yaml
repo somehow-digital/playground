@@ -7,7 +7,10 @@ on:
       - main
 
 jobs:
-  install:
+  setup:
+    runs-on: ubuntu-latest
+  lint-codebase:
+    name: lint codebase
     runs-on: ubuntu-latest
     steps:
       - name: checkout repository
@@ -28,6 +31,26 @@ jobs:
         run: pnpm install
       - name: lint codebase
         run: pnpm lint
+  lint-title:
+    name: lint title
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'pull_request' }}
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: setup package manager
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: install node
+        uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          check-latest: true
+          node-version-file: '.nvmrc'
+      - name: install dependencies
+        run: pnpm install
       - name: lint title
         run: echo "${{ github.event.pull_request.title }}" | pnpm exec commitlint
-        if: ${{ github.event_name == 'pull_request' }}
