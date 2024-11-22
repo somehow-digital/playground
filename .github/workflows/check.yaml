@@ -51,4 +51,4 @@ jobs:
       - name: install dependencies
         run: pnpm install
       - name: lint title
-        run: echo "${{ github.event.pull_request.title }}" | pnpm exec commitlint
+        run: echo "${{ github.event.pull_request.title }}" | pnpm exec commitlint --extends @somehow-digital/commitlint-config/conventional
