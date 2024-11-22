@@ -1,4 +1,4 @@
-name: MERGE
+name: TITLE
 
 on:
   pull_request:
