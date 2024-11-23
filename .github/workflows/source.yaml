@@ -1,6 +1,7 @@
 name: SOURCE
 
 on:
+  merge_group:
   pull_request:
   push:
     branches:

@@ -1,6 +1,7 @@
 name: TITLE
 
 on:
+  merge_group:
   pull_request:
     types: [opened, reopened, edited, synchronize]
 
