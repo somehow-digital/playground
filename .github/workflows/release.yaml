@@ -5,6 +5,8 @@ on:
 
 jobs:
   source:
+    name: verify source
+    runs-on: ubuntu-latest
     uses: ./.github/workflows/source.yaml
   release:
     name: release version
