@@ -1,6 +1,7 @@
 name: SOURCE
 
 on:
+  workflow_call:
   merge_group:
   pull_request:
   push:
