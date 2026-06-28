@@ -19,7 +19,7 @@ importers:
         version: 2.18.0(cspell@10.0.1)
       '@somehow-digital/prettier-config':
         specifier: ^3.0.0
-        version: 3.0.0(prettier@3.8.5)
+        version: 3.0.0(prettier@3.9.0)
       '@somehow-digital/semantic-release-config':
         specifier: ^2.0.0
         version: 2.1.0(semantic-release@25.0.5(typescript@6.0.3))
@@ -36,8 +36,8 @@ importers:
         specifier: ^17.0.0
         version: 17.0.8
       prettier:
-        specifier: 3.8.5
-        version: 3.8.5
+        specifier: 3.9.0
+        version: 3.9.0
       semantic-release:
         specifier: ^25.0.0
         version: 25.0.5(typescript@6.0.3)
@@ -1426,8 +1426,8 @@ packages:
     resolution: {integrity: sha512-C+VUP+8jis7EsQZIhDYmS5qlNtjv2yP4SNtjXK9AP1ZcTRlnSfuumaTnRfYZnYgUUYVIKqL0fRvmUGDV2fmp6g==}
     engines: {node: '>=4'}
 
-  prettier@3.8.5:
-    resolution: {integrity: sha512-zxcTTCedNGJM4R8sj/Cq/F0W/c4iE0afWBcBwMTRtw4WHYP9TWkYjdiH3npPRUYsXQCPR0hTU9yjovOu+E6EQA==}
+  prettier@3.9.0:
+    resolution: {integrity: sha512-LjIqSIC5VYLzs9WedVmJ2ljNAGnU+DteIClbahu4L/DBeWjZ6iT/k1lAYyu9JUh+1xINxWadaPw/Pl63y/agAw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2383,9 +2383,9 @@ snapshots:
       '@cspell/dict-de-de': 4.1.2
       cspell: 10.0.1
 
-  '@somehow-digital/prettier-config@3.0.0(prettier@3.8.5)':
+  '@somehow-digital/prettier-config@3.0.0(prettier@3.9.0)':
     dependencies:
-      prettier: 3.8.5
+      prettier: 3.9.0
 
   '@somehow-digital/semantic-release-config@2.1.0(semantic-release@25.0.5(typescript@6.0.3))':
     dependencies:
@@ -3214,7 +3214,7 @@ snapshots:
       find-up: 2.1.0
       load-json-file: 4.0.0
 
-  prettier@3.8.5: {}
+  prettier@3.9.0: {}
 
   pretty-ms@9.3.0:
     dependencies:
